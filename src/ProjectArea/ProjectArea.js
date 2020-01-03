@@ -39,18 +39,17 @@ const ProjectArea = () => {
         <h1 className="title">&#x25A0;&thinsp;&thinsp;PROJECTS </h1>
         <div id='projects'></div>
         <p>
-          Throughout my years working in design and development, I’ve had the chance to work wiith quite a few amazing
-          people. Here are some examples of the projects I’ve had the honour to be a part of.
-                </p>
+          Throughout my years of development experience I have had many opportunities to work on some really amazing projects. Below is an example of a professional project I have worked on, as well as three personal projects to illustrate the wide range of my skills and interests. I have worked on many more projects and would love to discuss them with you!
+        </p>
 
       </div>
       <Project side='left' title='Veterinary Training Mannequin' desc={VET_DESC} icon={vetProjIcon} indexImg={indexImg1} learnMore={false} />
 
-      <Project side='right' title='Alpha Game Engine' desc={ALPHA_DESC} icon={vetProjIcon} indexImg={indexImg2} url="https://github.com/mcmahonliam837/AlphaGameEngine" />
+      <Project side='right' title='Alpha Game Engine' desc={ALPHA_DESC} icon={''} indexImg={indexImg2} url="https://github.com/mcmahonliam837/AlphaGameEngine" />
 
-      <Project side='left' title='Image Processing API' desc={IMG_DESC} icon={vetProjIcon} indexImg={indexImg3} url="https://github.com/mcmahonliam837/ImageProcessingAPI" />
+      <Project side='left' title='Image Processing API' desc={IMG_DESC} icon={''} indexImg={indexImg3} url="https://github.com/mcmahonliam837/ImageProcessingAPI" />
 
-      <Project side='right' title='This Website' desc={THIS_DESC} icon={vetProjIcon} indexImg={indexImg4} url="https://github.com/mcmahonliam837/portfolioSite" />
+      <Project side='right' title='This Website' desc={THIS_DESC} icon={''} indexImg={indexImg4} url="https://github.com/mcmahonliam837/portfolioSite" />
 
       <div className="moreButtonArea">
         <a href="https://github.com/mcmahonliam837" target="_blank" rel="noopener noreferrer">

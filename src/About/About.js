@@ -11,13 +11,7 @@ const About = () => {
       <div>
         <h1 className="title">&#x25A0;&thinsp;&thinsp;Hi there, I’m Liam!</h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec molestie ipsum non nisi lobortis, a lacinia
-          augue pellentesque. Nulla rutrum aliquet urna, vitae euismod lectus rutrum a. Aenean viverra enim non sodales
-          dictum. Pellentesque habitant morbi
-          tristique senectus et netus et malesuada fames ac turpis egestas. Fusce vitae metus enim. Etiam ultrices justo
-          vel lacus egestas, quis accumsan erat vestibulum. Aenean ante ipsum, dictum ut gravida nec, vehicula sed elit.
-          Vestibulum tincidunt porta
-          ante, id luctus nisl finibus non.
+          A graduate of Seneca Colleges Computer Engineering Technology program, Skills Ontario Competition Medalist, current York University Computer Science student and passionate computer enthusiast. There is nothing that I love more than a challange which pushes the limits of my knowledge. This passion is what drove me to represent Seneca at Skills Ontario, to join a student lead research project at seneca, and continue to challange myself now at York.
         </p>
       </div>
 
@@ -33,10 +27,10 @@ const About = () => {
             <h1>Web Development</h1>
           </li>
 
-          <li>
+          {/* <li>
             <img src={mobileDesignIcon} alt='' />
             <h1>Mobile Development</h1>
-          </li>
+          </li> */}
 
           <li>
             <img src={embeddedSystems} alt='' />

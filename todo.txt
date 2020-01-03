@@ -1,23 +1,14 @@
-make the email form reactive
 
-make the "learn more" and the "and more" buttons work.
+project icons
+
+make the email form reactive
 
 get stock image of toronto
 
-make project indexes
-
-add more projects
-
 add a link to my resume
-
-put proper text
 
 Check reactivity
 
-optimize load times
-
 check for errors
-
-send to fahim for his input
 
 publish (DONE)!!!!!!
