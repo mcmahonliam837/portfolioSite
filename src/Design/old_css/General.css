@@ -1,0 +1,73 @@
+html, body {
+    background-color: #181818;
+    height: 100%;
+    /* width: 100vw; */
+    margin: 0;
+    
+}
+
+footer {
+    margin: 0;
+    width: 100%;
+}
+
+button {
+    outline: none;
+}
+
+.fadeInBlock {
+    opacity: 0;
+}
+
+.title {
+    font-size: 57px;
+    font-family: "Raleway";
+    font-weight: lighter;
+    color: rgb(115, 234, 193);
+    line-height: 1;
+    text-align: left;
+    left: 60px;
+    list-style-type: none;
+    padding-top: 20px;
+}
+
+.content {
+    width: 75vw;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.content p {
+    color: #acacac;
+    font-size: 18pt;
+    padding-left: 60px;
+    padding-right: 60px;
+    text-align: left;
+    line-height: 30pt;
+}
+
+.highlight {
+    color: rgb(115, 234, 193);
+    font-weight: lighter;
+}
+
+.learnMore {
+    text-decoration: none;
+    z-index: 1;
+}
+
+
+
+.socialMediaIcon {
+    width: 63px;
+}
+
+
+
+@media (max-width: 960px) {
+    .moreButtonArea {
+        text-align: center;
+        padding-bottom: 100px;
+        padding-top: 300px;
+    }
+}

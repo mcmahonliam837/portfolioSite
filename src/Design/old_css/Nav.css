@@ -1,0 +1,42 @@
+#navContainer{
+	position: absolute;
+	margin: 0 auto 0 auto;
+	left:0;
+	right:0;
+	bottom: 5%;
+}
+
+#nav{
+	list-style: none;
+	text-align: center;
+}
+#nav li{
+	display: inline-block;
+}
+
+#nav li:hover p{
+	opacity: 1;
+}
+
+#nav li button{
+	color: #73eac1;
+	background: transparent;
+	outline: none;
+	border: none;
+	font-size: 12pt;
+	font-family: "Open Sans";
+	font-weight: lighter;
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+#nav li p{
+	color: #73eac1;
+	background: transparent;
+	outline: none;
+	border: none;
+	font-size: 12pt;
+	font-family: "Open Sans";
+	font-weight: lighter;
+	line-height: 0.1;
+	opacity: 0;
+}

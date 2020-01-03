@@ -1,0 +1,19 @@
+#contactButtonTop {
+    border: 3px solid rgb(115, 234, 193);
+    border-radius: 20px;
+    background-color: #181818;
+    color: rgb(115, 234, 193);
+    font-family: "Open Sans";
+    font-size: 15pt;
+    right: 10%;
+    padding: 0;
+    position: absolute;
+    top: 40px;
+    width: 152px;
+    height: 40px;
+}
+
+#contactButtonTop:hover {
+    border: 3px solid rgb(70, 186, 161);
+    color: rgb(74, 186, 160);
+}

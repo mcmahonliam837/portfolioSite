@@ -1,0 +1,54 @@
+.parallax {
+	height: 100%;
+	margin: 0;
+	padding: 10px 10px;
+	/* Create the parallax scrolling effect */
+	background: no-repeat fixed center;
+	background-size: cover;
+}
+
+.parallax h1 {
+
+	left: 0;
+	right:0;
+	margin-right: auto;
+	margin-left: auto;
+	bottom: 50%;
+	font-family: "Raleway";
+	font-size: 40px;
+	color: rgb(115, 234, 193);
+	font-weight: bold;
+	line-height: 1;
+	text-align: center;
+	opacity: 0;
+	position: absolute;
+}
+
+.parallax h2{
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	bottom: 45%;
+	font-family: "Open Sans";
+	font-size: 22px;
+	color: rgb(255, 255, 255);
+	font-weight: bold;
+	line-height: 1;
+	text-align: center;
+	opacity: 0;
+	position: absolute;
+}
+
+#logo{
+	left: 10%;
+	top: 0;
+	position: absolute;
+}
+
+
+@media(max-width: 400px) {
+	.parallax h2 {
+		bottom: 30%;
+	}
+}

@@ -1,0 +1,20 @@
+#about_area {
+    
+}
+
+#moreButton{
+	border: 3px solid rgb(115, 234, 193);
+	border-radius: 20px;
+	background-color: #181818;
+	color: rgb(115, 234, 193);
+	font-family: "Open Sans";
+	font-size: 15pt;
+	padding: 0;
+	width: 152px;
+	height: 40px;
+}
+
+.moreButtonArea{
+	text-align: center;
+	margin-bottom: 100px;
+}
