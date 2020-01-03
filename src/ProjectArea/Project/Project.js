@@ -45,13 +45,13 @@ const Project = (props) => {
         <div className="projectContents" style={{ paddingTop: "50px !important" }}>
 
           <div className='project_img'>
-          
-         
-          { dimensions.width > 800 &&
-            <img src={props.indexImg} className="ProjectListIndex" alt='' /> 
-          }
 
-          { (props.side === 'left' || dimensions.width <= 1525) && img }
+
+            {dimensions.width > 800 &&
+              <img src={props.indexImg} className="ProjectListIndex" alt='' />
+            }
+
+            {(props.side === 'left' || dimensions.width <= 1525) && img}
 
           </div>
 
@@ -61,11 +61,16 @@ const Project = (props) => {
               <img src={underline} className="projectTitleUnderLineRight" alt='' />
             </div>
             <p className="projectContentRight">{props.desc}
-              <br /><span className="highlight">Learn more</span>
+              <br />
+              { (props.learnMore === undefined || props.learnMore) &&
+              <a href={props.url} target="_blank" rel="noopener noreferrer">
+                <span className="highlight" style={{cursor: "pointer"}}>Learn more</span>
+              </a>
+              }
             </p>
           </div>
 
-          {(props.side === 'right' && dimensions.width > 1525) && img }
+          {(props.side === 'right' && dimensions.width > 1525) && img}
 
 
         </div>
