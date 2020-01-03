@@ -11,7 +11,7 @@ const About = () => {
       <div>
         <h1 className="title">&#x25A0;&thinsp;&thinsp;Hi there, I’m Liam!</h1>
         <p>
-          A graduate of Seneca Colleges Computer Engineering Technology program, Skills Ontario Competition Medalist, current York University Computer Science student and passionate computer enthusiast. There is nothing that I love more than a challange which pushes the limits of my knowledge. This passion is what drove me to represent Seneca at Skills Ontario, to join a student lead research project at seneca, and continue to challange myself now at York. If you are interested, here is my <a href='Resume.pdf'  target="_blank" rel="noopener noreferrer"><span className='highlight'>resume</span></a>.
+          A graduate of Seneca College's Computer Engineering Technology Program (Co-op), Skills Ontario Competition Medalist, current York University Computer Science student and passionate computer enthusiast. There is nothing that I love more than a challenge which pushes the limits of my knowledge. This passion was my inspiration to successfully represent Seneca at Skills Ontario, to join a student-led research project at Seneca, and continue to challange myself now at York. If you are interested, here is my <a href='Resume.pdf'  target="_blank" rel="noopener noreferrer"><span className='highlight'>resume</span></a>.
         </p>
       </div>
 
