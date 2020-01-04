@@ -67,3 +67,12 @@ textarea {
     color:white;
     border: rgb(115, 234, 193) solid;
 }
+
+
+
+@media (max-width: 760px) {
+	.email_form {
+        width: 70%;
+    }
+    
+}

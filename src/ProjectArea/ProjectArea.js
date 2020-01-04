@@ -3,6 +3,9 @@ import "./ProjectArea.css";
 import Project from "./Project/Project";
 
 import vetProjIcon from './../Design/VetProjIcon.png';
+import alphaProjIcon from './../Design/openGLIcon.png';
+import ImgProjIcon from './../Design/grayscale_forest.gif';
+import thisProjIcon from './../Design/thisSite.png';
 import indexImg1 from './../Design/Project1.png';
 import indexImg2 from './../Design/Project2.png';
 import indexImg3 from './../Design/Project3.png';
@@ -21,8 +24,8 @@ const ALPHA_DESC =
 
 
 const IMG_DESC =
-  'An web API written in Go for experimenting with Golangs concurrency model, and functional programming \
-  capabilities. Created as a platform for me to experiment with different image processing techniques.';
+  'An web API written in Go for experimenting with its concurrency model, and functional \
+  capabilities. Created as a platform for me to experiment with different image processing techniques. The image to the left was made by the api.';
 
 
 const THIS_DESC =
@@ -45,11 +48,11 @@ const ProjectArea = () => {
       </div>
       <Project side='left' title='Veterinary Training Mannequin' desc={VET_DESC} icon={vetProjIcon} indexImg={indexImg1} learnMore={false} />
 
-      <Project side='right' title='Alpha Game Engine' desc={ALPHA_DESC} icon={''} indexImg={indexImg2} url="https://github.com/mcmahonliam837/AlphaGameEngine" />
+      <Project side='right' title='Alpha Game Engine' desc={ALPHA_DESC} icon={alphaProjIcon} indexImg={indexImg2} url="https://github.com/mcmahonliam837/AlphaGameEngine" />
 
-      <Project side='left' title='Image Processing API' desc={IMG_DESC} icon={''} indexImg={indexImg3} url="https://github.com/mcmahonliam837/ImageProcessingAPI" />
+      <Project side='left' title='Image Processing API' desc={IMG_DESC} icon={ImgProjIcon} indexImg={indexImg3} url="https://github.com/mcmahonliam837/ImageProcessingAPI" />
 
-      <Project side='right' title='This Website' desc={THIS_DESC} icon={''} indexImg={indexImg4} url="https://github.com/mcmahonliam837/portfolioSite" />
+      <Project side='right' title='This Website' desc={THIS_DESC} icon={thisProjIcon} indexImg={indexImg4} url="https://github.com/mcmahonliam837/portfolioSite" />
 
       <div className="moreButtonArea">
         <a href="https://github.com/mcmahonliam837" target="_blank" rel="noopener noreferrer">
