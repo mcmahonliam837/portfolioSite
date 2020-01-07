@@ -17,6 +17,13 @@ const EmailForm = (props) => {
     msg: '',
   });
 
+  const [requiredFields, setRequiredFields] = React.useState({
+    name: false,
+    company: false,
+    email: false,
+    subject: false,
+    msg: false,
+  });
 
   const handleInput = (event) => {
 
@@ -25,26 +32,37 @@ const EmailForm = (props) => {
       [event.target.name]: event.target.value
     });
 
+
+    setRequiredFields({
+      ...requiredFields,
+      [event.target.name]: event.target.value != '' && event.target.value != undefined
+    });
+
   };
 
   const submitForm = (event) => {
-    fetch('https://us-central1-portfolio-c275e.cloudfunctions.net/sendMessage', {
-      method: 'POST', // *GET, POST, PUT, DELETE, etc.
-      //AccessControlAllowOrigin: '*',
-      credentials: 'omit',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(formData) // body data type must match "Content-Type" header
-    }).then((response) => {
-      console.log(response)
-      if (response.ok === true) {
-        props.close()
-      }
-    }).catch((err) => {
-      console.error(err);
-    })
 
+    if (Object.values(requiredFields).reduce((x, y) => x && y)) {
+
+      fetch('https://us-central1-portfolio-c275e.cloudfunctions.net/sendMessage', {
+        method: 'POST',
+        credentials: 'omit',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      
+      }).then((response) => {
+        if (response.status === 0) {
+          props.close();
+        }
+
+      }).catch((err) => {
+        console.error(err);
+      });
+
+    }
     event.preventDefault();
   };
 
@@ -60,34 +78,34 @@ const EmailForm = (props) => {
 
         <form onSubmit={submitForm}>
           <label>
-            Name:<br />
+            Name: <span className="requiredField" style={{ visibility: !requiredFields.name && props.visable ? 'visible' : 'hidden' }}>*Required</span> <br />
             <input name="name" type="text" onChange={handleInput} value={formData.name} />
           </label>
 
           <br />
 
           <label>
-            Company:<br />
+            Company: <span className="requiredField" style={{ visibility: !requiredFields.company && props.visable ? 'visible' : 'hidden' }}>*Required</span><br />
             <input name="company" type="text" onChange={handleInput} value={formData.company} />
           </label>
 
           <label>
-            Email:<br />
+            Email: <span className="requiredField" style={{ visibility: !requiredFields.email && props.visable ? 'visible' : 'hidden' }}>*Required</span><br />
             <input name="email" type="text" onChange={handleInput} value={formData.email} />
           </label>
 
           <br />
 
           <label>
-            Subject:<br />
+            Subject: <span className="requiredField" style={{ visibility: !requiredFields.subject && props.visable ? 'visible' : 'hidden' }}>*Required</span><br />
             <input name="subject" type="text" onChange={handleInput} value={formData.subject} />
           </label>
 
           <br />
 
           <label>
-            Message:<br />
-            <textarea name="msg" id="msg_box" onChange={handleInput} value={formData.msg}  />
+            Message: <span className="requiredField" style={{ visibility: !requiredFields.msg && props.visable ? 'visible' : 'hidden' }}>*Required</span><br />
+            <textarea name="msg" id="msg_box" onChange={handleInput} value={formData.msg} />
           </label>
 
           <br />
