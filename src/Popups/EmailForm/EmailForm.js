@@ -49,8 +49,15 @@ const EmailForm = (props) => {
   };
 
 
+  if (!props.visable) {
+    return (
+      <div style={{visibility: 'hidden'}}></div>
+    );
+  }
+
   return (
-    <div style={{ visibility: props.visable ? 'visible' : 'hidden' }}>
+    <div>
+
       <div className='popup_overlay' onClick={() => props.close()}>
 
       </div>
