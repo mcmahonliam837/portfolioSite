@@ -68,7 +68,12 @@ textarea {
     border: rgb(115, 234, 193) solid;
 }
 
-
+.requiredField {
+    color: red !important;
+    font-size: small !important;
+    border: 0 !important;
+    
+}
 
 @media (max-width: 760px) {
 	.email_form {
