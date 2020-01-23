@@ -5,7 +5,7 @@ import Project from "./Project/Project";
 import vetProjIcon from './../Design/VetProjIcon.png';
 import alphaProjIcon from './../Design/openGLIcon.png';
 import ImgProjIcon from './../Design/grayscale_forest.gif';
-import thisProjIcon from './../Design/thisSite.png';
+import ldapProjIcon from './../Design/ldapIcon.png';
 import indexImg1 from './../Design/Project1.png';
 import indexImg2 from './../Design/Project2.png';
 import indexImg3 from './../Design/Project3.png';
@@ -26,6 +26,9 @@ const ALPHA_DESC =
 const IMG_DESC =
   'An web API written in Go for experimenting with its concurrency model, and functional \
   capabilities. Created as a platform for me to experiment with different image processing techniques. The image to the left was made by the api.';
+
+const LDAP_DESC =
+ 'This project was created during my co-op terms at AGS Automotive. This was created inorder to reduce the amount future co-ops access AD and to increase the speed of AD management.';
 
 
 const THIS_DESC =
@@ -51,8 +54,10 @@ const ProjectArea = () => {
       <Project side='right' title='Alpha Game Engine' desc={ALPHA_DESC} icon={alphaProjIcon} indexImg={indexImg2} url="https://github.com/mcmahonliam837/AlphaGameEngine" />
 
       <Project side='left' title='Image Processing API' desc={IMG_DESC} icon={ImgProjIcon} indexImg={indexImg3} url="https://github.com/mcmahonliam837/ImageProcessingAPI" />
+      
+      <Project side='right' title='LDAP Report Generator' desc={LDAP_DESC} icon={ldapProjIcon} indexImg={indexImg4} url="https://github.com/mcmahonliam837/ldap_gui" />
 
-      <Project side='right' title='This Website' desc={THIS_DESC} icon={thisProjIcon} indexImg={indexImg4} url="https://github.com/mcmahonliam837/portfolioSite" />
+      {/* <Project side='left' title='This Website' desc={THIS_DESC} icon={thisProjIcon} indexImg={indexImg4} url="https://github.com/mcmahonliam837/portfolioSite" /> */}
 
       <div className="moreButtonArea">
         <a href="https://github.com/mcmahonliam837" target="_blank" rel="noopener noreferrer">
