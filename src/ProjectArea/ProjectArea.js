@@ -57,8 +57,6 @@ const ProjectArea = () => {
       
       <Project side='right' title='LDAP Report Generator' desc={LDAP_DESC} icon={ldapProjIcon} indexImg={indexImg4} url="https://github.com/mcmahonliam837/ldap_gui" />
 
-      {/* <Project side='left' title='This Website' desc={THIS_DESC} icon={thisProjIcon} indexImg={indexImg4} url="https://github.com/mcmahonliam837/portfolioSite" /> */}
-
       <div className="moreButtonArea">
         <a href="https://github.com/mcmahonliam837" target="_blank" rel="noopener noreferrer">
           <button id="moreButton" onClick={() => { }}>AND MORE</button>
