@@ -38,17 +38,40 @@ const THIS_DESC =
 
 
 const ProjectArea = () => {
+
+  const [dimensions, setDimensions] = React.useState({
+    height: window.innerHeight,
+    width: window.innerWidth
+  });
+
+  React.useEffect(() => {
+    function handleResize() {
+      setDimensions({
+        height: window.innerHeight,
+        width: window.innerWidth
+      });
+    }
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  });
+
+
   return (
     <div id="project_area">
+      <div style={{display: "flex", justifyContent: "center", flexDirection: "column"}}>
       <div className="projects_into_area">
 
-        <h1 className="title">&#x25A0;&thinsp;&thinsp;PROJECTS </h1>
+        
+        <h1 className="title">{ (() => {if (dimensions.width > 768) { return <span>&#x25A0;&thinsp;&thinsp;</span>;} else return ''; })() }PROJECTS </h1>
         <div id='projects'></div>
         <p>
           During my years of formal education and development experience I have had many opportunities to work on some really amazing projects. Below is an example of a professional project I have worked on, as well as three personal projects to illustrate the wide range of my skills and interests. I have worked on many more projects and would love to discuss them with you!
         </p>
 
       </div>
+      <div className='projectList'>
       <Project side='left' title='Veterinary Training Mannequin' desc={VET_DESC} icon={vetProjIcon} indexImg={indexImg1} learnMore={false} />
 
       <Project side='right' title='Alpha Game Engine' desc={ALPHA_DESC} icon={alphaProjIcon} indexImg={indexImg2} url="https://github.com/mcmahonliam837/AlphaGameEngine" />
@@ -57,6 +80,8 @@ const ProjectArea = () => {
       
       <Project side='right' title='LDAP Report Generator' desc={LDAP_DESC} icon={ldapProjIcon} indexImg={indexImg4} url="https://github.com/mcmahonliam837/ldap_gui" />
 
+      </div>
+    </div>
       <div className="moreButtonArea">
         <a href="https://github.com/mcmahonliam837" target="_blank" rel="noopener noreferrer">
           <button id="moreButton" onClick={() => { }}>AND MORE</button>

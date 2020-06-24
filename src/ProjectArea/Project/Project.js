@@ -40,18 +40,18 @@ const Project = (props) => {
   );
 
   return (
-    <div>
-      <div>
-        <div className="projectContents" style={{ paddingTop: "50px !important" }}>
+        <div className="projectContents" style={{ paddingTop: "100px !important" }}>
 
           <div className='project_img'>
 
 
-            {dimensions.width > 800 &&
+            {dimensions.width > 768 &&
               <img src={props.indexImg} className="ProjectListIndex" alt='' />
             }
 
-            {(props.side === 'left' || dimensions.width <= 1525) && img}
+            {dimensions.width > 768 &&
+              props.side === 'left' && img
+            }
 
           </div>
 
@@ -70,12 +70,10 @@ const Project = (props) => {
             </p>
           </div>
 
-          {(props.side === 'right' && dimensions.width > 1525) && img}
+          {(props.side === 'right' && dimensions.width > 768) && img}
 
 
         </div>
-      </div>
-    </div>
   );
 
 
