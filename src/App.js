@@ -60,9 +60,13 @@ function App() {
 
           <div className="email">
             <h1>
-              Shoot me an email{" "}
+              Shoot me an email
               <span className="highlight">
-                <a href="mailto:lm@liammcmahon.me" target="_blank" className="highlight">here!</a>
+                <a href="mailto:lm@liammcmahon.me" target="_blank" className="highlight"> here! </a>
+              </span>
+              Or take a look at my 
+              <span className="highlight">
+                <a href='Resume.pdf'  target="_blank" rel="noopener noreferrer"><span className='highlight'> resume!</span></a>
               </span>
             </h1>
           </div>

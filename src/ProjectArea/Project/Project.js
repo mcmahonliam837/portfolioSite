@@ -44,11 +44,12 @@ const Project = (props) => {
 
           <div className='project_img'>
 
-
+          {/* 
             {dimensions.width > 768 &&
               <img src={props.indexImg} className="ProjectListIndex" alt='' />
             }
 
+*/}
             {dimensions.width > 768 &&
               props.side === 'left' && img
             }
