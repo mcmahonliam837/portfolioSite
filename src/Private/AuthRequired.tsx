@@ -1,8 +1,12 @@
 import React, { useContext, useEffect, useState } from "react";
-import Firebase, { FirebaseContext } from "../FirebaseContext";
-import Login from "./Login";
+import { Redirect } from "react-router-dom";
+import { FirebaseContext } from "../FirebaseContext";
 
-export default (props) => {
+interface Props {
+  children?: any;
+}
+
+export default (props: Props) => {
   const firebase = useContext(FirebaseContext);
 
   const [auth, setAuth] = useState(false);
@@ -25,12 +29,8 @@ export default (props) => {
   if (loading) {
     return <div />;
   } else if (!auth) {
-    return <Login />;
+    return <Redirect to="/login" />;
   } else {
-    return (
-      <div>
-        <p>agenda</p>
-      </div>
-    );
+    return <div>{props.children}</div>;
   }
 };

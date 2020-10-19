@@ -1,7 +1,8 @@
-import { FirebaseContext } from "FirebaseContext";
 import React, { useCallback, useContext, useState } from "react";
+import { FirebaseContext } from "FirebaseContext";
+import { withRouter } from "react-router";
 
-export default (props) => {
+export default withRouter((props) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const firebase = useContext(FirebaseContext);
@@ -14,6 +15,7 @@ export default (props) => {
         email,
         password
       );
+      props.history.push("/dashboard");
     } catch (error) {
       const errorCode = error.code;
       const errorMessage = error.message;
@@ -36,4 +38,4 @@ export default (props) => {
       <button onClick={login}>Login</button>
     </div>
   );
-};
+});
